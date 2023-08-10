@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:savup_app2/pages/bundle_page_one.dart';
+import 'package:savup_app2/pages/bundle_page_two.dart';
+import 'package:savup_app2/pages/bundle_page_three.dart';
+import 'package:savup_app2/pages/bundle_page_four.dart';
 import 'package:savup_app2/widgets/drawercolumnlist.dart';
 
 class PortfolioPage extends StatefulWidget {
@@ -15,6 +18,18 @@ class _PortfolioPageState extends State<PortfolioPage> {
     'portfolio_two.png',
     'portfolio_three.png',
     'portfolio_four.png',
+  ];
+  List bundles = [
+    'Bundle 1',
+    'Bundle 2',
+    'Bundle 3',
+    'Bundle 4',
+  ];
+  List bundlePages = [
+    const BundleOne(),
+    const BundleTwo(),
+    const BundleThree(),
+    const BundleFour()
   ];
   @override
   Widget build(BuildContext context) {
@@ -61,7 +76,8 @@ class _PortfolioPageState extends State<PortfolioPage> {
                         width: 150,
                         height: 150,
                         decoration: BoxDecoration(
-                          borderRadius: const BorderRadius.all(Radius.circular(20.0)),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(20.0)),
                           image: DecorationImage(
                               image: AssetImage(
                                 // ignore: prefer_interpolation_to_compose_strings
@@ -74,13 +90,13 @@ class _PortfolioPageState extends State<PortfolioPage> {
                     const SizedBox(width: 75),
                     Column(
                       children: [
-                        const Text('Bundle 1'),
+                        Text(bundles[index]),
                         ElevatedButton(
                           onPressed: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const BundleOne(),
+                                builder: (context) => bundlePages[index],
                               ),
                             );
                           },

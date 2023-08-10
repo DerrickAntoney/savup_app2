@@ -26,13 +26,6 @@ class _NavigationPageState extends State<NavigationPage>
   void dispose() {
     super.dispose();
 
-    // ignore: unused_element
-    /*@override
-    void dispose() {
-      _tabController.dispose();
-      super.dispose();
-    }*/
-
     _tabController.dispose();
   }
 
