@@ -7,16 +7,6 @@ class BundleOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(
-              context,
-            );
-          },
-          icon: const Icon(Icons.arrow_back),
-        ),
-      ),
       body: Container(
           width: double.maxFinite,
           height: double.maxFinite,
@@ -33,6 +23,17 @@ class BundleOne extends StatelessWidget {
                           image: AssetImage('assets/images/portfolio_one.png'),
                           fit: BoxFit.cover)),
                 ),
+              ),
+              Positioned(
+                child: IconButton(
+                        color: Colors.white,
+                        onPressed: () {
+                          Navigator.pop(
+                context,
+                          );
+                        },
+                        icon: const Icon(Icons.arrow_back),
+                      ),
               ),
               Positioned(
                   top: 300,
