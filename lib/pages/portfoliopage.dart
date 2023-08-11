@@ -20,7 +20,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
     'portfolio_four.png',
   ];
   List bundles = [
-    'Bundle 1',
+    'Small Businesses',
     'Bundle 2',
     'Bundle 3',
     'Bundle 4',
@@ -100,7 +100,12 @@ class _PortfolioPageState extends State<PortfolioPage> {
                               ),
                             );
                           },
-                          child: const Text('View'),
+                          child: const Text(
+                            'View',
+                            style: TextStyle(
+                              backgroundColor: Color.fromRGBO(49, 210, 177, 1),
+                            ),
+                          ),
                         )
                       ],
                     ),
